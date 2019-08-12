@@ -1,3 +1,9 @@
+combined.*
+combined_files/*
+combined_files
+html/*
+html
+
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
