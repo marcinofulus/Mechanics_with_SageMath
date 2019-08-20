@@ -28,8 +28,8 @@ pdf: $(notebooks_executed)  latex_template2.tplx cas_utils.sage
 
 clean:
 	@rm -fv combined.pdf  mechanics_with_sagemath.pdf *log *aux *tex
-	@rm -frv notebooks4pdf/
+	@rm -frv notebooks4pdf/ html/
 
 dirs:
-	@test -d notebooks4pdf || mkdir -v notebooks4pdf && echo notebook4pdf exists
+	@test -d notebooks4pdf || mkdir -v notebooks4pdf && echo notebooks4pdf exists
 	@test -L notebooks4pdf/images || ln -sv ../images notebooks4pdf/images && echo images link exists  
