@@ -27,7 +27,7 @@ pdf: $(notebooks_executed)  latex_template2.tplx cas_utils.sage
 
 
 clean:
-	@rm -fv combined.*  mechanics_with_sagemath.pdf *log *aux *tex
+	@rm -fv combined.*   *log *aux *tex
 	@rm -frv notebooks4pdf/ html/
 
 dirs:
