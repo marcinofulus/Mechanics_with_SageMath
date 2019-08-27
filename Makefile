@@ -19,11 +19,10 @@ test:
 	@echo $(log1) $(log2)
 
 notebooks4pdf/%.ipynb : %.ipynb
-#	@make dirs
 	@echo CLEANING OUTPUT of $< 
 	@jupyter nbconvert --ClearOutputPreprocessor.enabled=True --clear-output $<
 	@echo executing notebook  $< and writing it to $@
-	@time jupyter nbconvert  --to notebook --execute  $< --output $@  >& /tmp/nbconvert.log
+	@time PDF=1 jupyter nbconvert  --to notebook --execute  $< --output $@  >& /tmp/nbconvert.log
 
 pdf: $(notebooks_executed)  latex_template2.tplx cas_utils.sage
 	cd notebooks4pdf; python3 -m bookbook.latex --template ../latex_template2.tplx --pdf && mv combined.pdf ../mechanics_with_sagemath.pdf
