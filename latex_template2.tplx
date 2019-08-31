@@ -76,9 +76,9 @@
 
 ((* block predoc *))
 
-\title{
-\textbf{\sffamily \huge Problems in Physics}\\[0.5cm]
-\sffamily(with SageMath )}
+\title{ 
+\textbf{\sffamily \huge Mechanics with SageMath}
+}
 
 \author{
 \centerline{\Oldincludegraphics[width=0.4\textwidth]{images/pendulum.png}}\\[2cm]
