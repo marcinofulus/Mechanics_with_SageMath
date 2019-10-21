@@ -1,4 +1,4 @@
-# Mechanics_with_SageMath
+# Mechanics with SageMath
 
 Problems in classical mechanics solved with SageMath
 
