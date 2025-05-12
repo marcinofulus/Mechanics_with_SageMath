@@ -10,7 +10,7 @@ def sanitize_namelist(lst):
         elif isinstance( x_, tuple):
             v, lv = x_
         else:
-            raise ValueError,'Wrong name: ' + str(type(x_))
+            raise (ValueError,'Wrong name: ' + str(type(x_)) )
         new_lst.append((v, lv))
     return new_lst
 
@@ -50,7 +50,7 @@ def make_symbols(xy_names, uv_names=[], verbose=False):
         var("%sdd"%v, latex_name=r'\ddot %s'%lv)
         var("%sd"%v, latex_name=r'\dot %s'%lv)
         var("d%s"%v, latex_name=r'\delta %s'%lv)
-        print v, " :: has been  processed"
+        print(v, " :: has been  processed")
      
     uv = [globals()[v] for v,lv in uv_names]
     xy = [globals()[v] for v,lv in xy_names]
@@ -64,7 +64,7 @@ def make_symbols(xy_names, uv_names=[], verbose=False):
         
     to_var = dict((v,k) for k,v in to_fun.items())
     if verbose:
-        print 'we have dictionaries:'
+        print('we have dictionaries:')
         show( table([ [v,r'$\iff$',k] for k,v in to_var.iteritems()]) )
     return to_fun, to_var
 
@@ -90,7 +90,7 @@ def transform_virtual_displacements(xy_names, uv_names, verbose=False, suffix='_
                                              for w2 in uv])
         new_variations.append( globals()['d'+repr(w)+suffix] )
         if verbose:
-            print 'd'+repr(w)+suffix+' : is added to namespace'
+            print('d'+repr(w)+suffix+' : is added to namespace')
             show([globals()['d'+repr(w)],globals()['d'+repr(w)+suffix]])
         
     
